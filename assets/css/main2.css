@@ -1,0 +1,164 @@
+/* 1 */
+#wrapper {
+  /* 9 반응형 */
+  /* border: 1px solid red; */
+  margin-right: auto;
+  max-width: 68rem;
+  margin:5rem auto;
+  /* border:5px solid red; */
+}
+
+#wrapper>*{
+  /* border:5px solid green; */
+}
+
+#wrapper>*>*{
+  /* border:5px solid blue; */
+}
+
+/* 2 백그라운드 이미지 가져오기*/
+body{
+  background-image: url(../../images/bg.jpg);
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* 6 header 정리 */
+#header {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+
+/* 3 header avatar */
+#header .avatar{
+  border-radius: 100%;
+  display: inline-block;
+  /* 1rem 은 16px을 말한다 */
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  margin-bottom: 1.5rem;
+}
+
+#header .avatar img{
+  border-radius: 100%;
+  display: block;
+}
+
+/* 4 header h1 웹폰트 */
+#header h1{
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 100;
+  margin-bottom: 1.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 2.3rem;
+}
+
+#header h1 strong{
+  color: white;
+  font-weight: 200;
+}
+
+#header h1 a{
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+/* 5 header icons fontello */
+#header ul.icons li{
+  /* 인라인으로 바꿔준다 아이콘이 블럭이기 때문
+  fontello 들어가서 아이콘 다운로드
+  index 위의 class를 바꿔준다 */
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  width:2rem;
+  height:2rem;
+  /* 화면 전체를 쓰는 특성이 있다 flex */
+  display: inline-flex;
+  /* 가운데 정렬 */
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+#header ul.icons li:hover{
+  /* border: 1px solid rgba(255, 255, 255, 0.25); */
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#header ul.icons li a{
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+#header ul.icons li .label{
+  display: none;
+}
+
+/* 7 main thumbsnails flex */
+#main .thumbnails {
+  display : flex;
+}
+#main .thumbnails div{
+  flex-grow: 1;
+  margin: 1rem;
+}
+#main .thumbnails img{
+  width: 100%;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  display: block;
+}
+#main .thumbnails h3{
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);;
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+#main .thumbnails a{
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* 8 footer */
+#footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 200;
+  padding-bottom: 3rem;
+}
+
+#footer a{
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+#footer:before{
+  content:'';
+  display: block;
+  margin: 3rem auto;
+  width:10rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);;
+}
+
+@media(max-width:480px){
+  #main .thumbnails{
+    display:block;
+  }
+}
